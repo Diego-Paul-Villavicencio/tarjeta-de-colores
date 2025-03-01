@@ -1,0 +1,73 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+ 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>COLOR GRADIENTE</title> 
+    <link rel="stylesheet" href="styles.css"> 
+</head> 
+ 
+<body> 
+    <section class="container"> 
+        <button id="menu-toggle" aria-label="Abrir menú"> 
+            <span></span> 
+            <span></span> 
+            <span></span> 
+        </button> 
+ 
+        <button id="theme-toggle" aria-label="Cambiar tema"> 
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"> 
+                <path 
+                    d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" /> 
+                <path 
+                    d="M12 2V4M12 20V22M4 12H2M6.31 6.31L4.9 4.9M17.69 6.31L19.1 4.9M6.31 17.69L4.9 19.1M17.69 17.69L19.1 19.1M22 12H20" /> 
+            </svg> 
+        </button> 
+ 
+        <aside id="sidebar"> 
+            <nav> 
+                <ul> 
+                    <li><a href="#formulario">FORMULARIO</a></li> 
+                    <li><a href="#gradiente">GRADIENTE</a></li> 
+                </ul> 
+            </nav> 
+        </aside> 
+ 
+        <main> 
+            <h1>COLOR GRADIENTE</h1> 
+                <section id="formulario"> 
+                <form id="gradient-form"> 
+                    <div class="form-group"> 
+                        <label for="color1">PRIMER COLOR</label> 
+                        <input type="color" id="color1" name="color1" value="#ff5e62"> 
+                    </div> 
+ 
+                    <div class="form-group"> 
+                        <label for="color2">SEGUNDO COLOR</label> 
+                        <input type="color" id="color2" name="color2" value="#ff9966"> 
+                    </div> 
+ 
+                    <div class="form-group"> 
+                        <label for="color3">TERCER COLOR</label> 
+                        <input type="color" id="color3" name="color3" value="#ffcc33"> 
+                    </div> 
+                </form> 
+            </section> 
+ 
+            <section id="gradiente"> 
+                <h2>RESULTADO DE LA GRADIENTE</h2> 
+                <div id="gradient-container"> 
+                    <div class="gradient-card"> 
+                        <div id="gradient-preview"></div> 
+                        <div id="gradient-code"></div> 
+                    </div> 
+                </div> 
+            </section> 
+        </main> 
+    </section> 
+ 
+    <script src="script.js"></script>
+</body>
+
+</html>
