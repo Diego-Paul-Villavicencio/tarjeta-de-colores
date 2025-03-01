@@ -17,16 +17,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }); 
       
     document.addEventListener('click', (event) => { 
-        if (!sidebar.contains(event.target) && event.target !== menuToggle && 
-!menuToggle.contains(event.target)) { 
+        if (!sidebar.contains(event.target) && event.target !== menuToggle && !menuToggle.contains(event.target)) {  
             sidebar.classList.remove('active'); 
         } 
     }); 
       
     themeToggle.addEventListener('click', () => { 
         document.body.classList.toggle('dark-mode'); 
-        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 
-'dark' : 'light'); 
+        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light'); 
     }); 
       
     if (localStorage.getItem('theme') === 'dark') { 
@@ -70,8 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const color2 = color2Input.value; 
         const color3 = color3Input.value; 
          
-        const gradientStyle = `linear-gradient(to bottom, ${color1}, ${color2}, 
-${color3})`; 
+        const gradientStyle = `linear-gradient(to bottom, ${color1}, ${color2}, ${color3})`; 
          
         gradientPreview.style.background = gradientStyle; 
         gradientCode.textContent = `background: ${gradientStyle};`; 
@@ -88,8 +85,7 @@ ${color3})`;
     [color1Input, color2Input, color3Input].forEach(input => { 
         input.addEventListener('input', () => { 
             if (color1Input.value && color2Input.value && color3Input.value) { 
-                const gradientStyle = `linear-gradient(to bottom, ${color1Input.value}, 
-${color2Input.value}, ${color3Input.value})`; 
+                const gradientStyle = `linear-gradient(to bottom, ${color1Input.value}, ${color2Input.value}, ${color3Input.value})`; 
                 gradientPreview.style.background = gradientStyle; 
             } 
         }); 
